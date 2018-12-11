@@ -404,7 +404,7 @@ class PaginationEmbed extends MessageEmbed {
     this.setClientMessage(message, this.clientMessage.content);
 
     if (message.guild) {
-      const permissions = ['ADD_REACTIONS', 'MANAGE_MESSAGES', 'EMBED_LINKS'];
+      const permissions = ['ADD_REACTIONS', 'EMBED_LINKS'];
       const missing = message.channel.permissionsFor(message.client.user).missing(permissions);
 
       if (missing.length)
