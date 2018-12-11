@@ -490,9 +490,6 @@ class PaginationEmbed extends MessageEmbed {
       const user = response.users.last();
       const emoji = [response.emoji.name, response.emoji.id];
 
-      if (clientMessage.guild)
-        await response.users.remove(user);
-
       switch (emoji[0] || emoji[1]) {
         case this.navigationEmojis.back:
           if (this.page === 1) return this._awaitResponse();
